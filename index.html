@@ -1,72 +1,216 @@
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tobias Hriško | Moje osobní stránka</title>
-</head>
-<body>
+ \<!DOCTYPE html>
 
-    <header>
-        <h1>Moje osobní stránka</h1>
+\<html lang="cs">
 
+\<head>
+&#x20;   \<meta charset="UTF-8">
+&#x20;   \<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Tobias Hriško | Moje osobní stránka</title>
+<meta name="description" content="Osobní web Tobiase Hriška. Poznejte mé zájmy, oblíbenou hudbu, filmy, sport a další věci, které mě baví.">
+
+<link rel="stylesheet" href="style.css">
+```
+
+\</head>
+
+\<body>
+
+```
+<!-- HLAVIČKA -->
+<header>
+    <div class="container">
         <nav>
-            <a href="#omne">O mně</a>
-            <a href="#zajmy">Moje zájmy</a>
-            <a href="#kontakt">Kontakt</a>
-        </nav>
-    </header>
+            <div class="logo">Moje<span>Stránka.</span></div>
 
-    <section id="omne">
+            <div class="nav-links">
+                <a href="#omne">O mně</a>
+                <a href="#zajmy">Moje zájmy</a>
+                <a href="#kontakt">Kontakt</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- ÚVODNÍ SEKCE -->
+<section class="hero">
+    <div class="container">
+
+        <p class="welcome">VÍTEJ NA MÉM WEBU 👋</p>
+
+        <h1>Ahoj, já jsem <span>Tobík.</span></h1>
+
+        <p class="hero-text">
+            Vítej na mém osobním webu.
+            Tady se dozvíš něco o mně,
+            mých zájmech a věcech, které mě baví.
+        </p>
+
+        <a href="#omne" class="button">Poznej mě ↓</a>
+
+    </div>
+</section>
+
+<!-- O MNĚ -->
+<section id="omne" class="section">
+    <div class="container">
+
         <h2>Něco o mně</h2>
 
-        <p>
-            Ahoj! Jmenuji se Tobias Hriško a v současnosti se věnuji studiu.
-            Odjakživa mě baví objevovat nové věci, rozšiřovat si obzory
-            a učit se novým dovednostem.
-        </p>
+        <div class="card">
 
-        <p>
-            Ve volném čase rád poslouchám hudbu, sleduji filmy
-            a trávím čas s přáteli.
-        </p>
+            <p>
+                Ahoj! Jmenuji se Tobias Hriško a v současnosti se věnuji studiu.
+                Odjakživa mě baví objevovat nové věci, rozšiřovat si obzory
+                a učit se novým dovednostem, které mě posouvají dál –
+                ať už jde o školu, nebo o běžný život.
+                Jsem zvídavý a rád přijímám víceméně jakékoliv výzvy.
+            </p>
 
-        <img src="https://picsum.photos/800/400" alt="Ilustrační fotografie">
-    </section>
+            <p class="highlight">
+                Když zrovna nespím, nejraději vypnu u hudby
+                nebo se ponořím do světa filmů.
+                Můj volný čas ale samozřejmě patří také přátelům –
+                ať už spolu vyrazíme ven, na nějakou akci,
+                nebo jen tak posedíme a popovídáme si.
+                V dobré společnosti dobíjím baterky ze všeho nejraději.
+            </p>
 
-    <section id="zajmy">
+            <p>
+                Tento web je můj první projekt vytvořený
+                pomocí HTML a CSS.
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- OBRÁZEK -->
+<section class="section">
+    <div class="container">
+
+        <h2>Ukradená Fotka ↓</h2>
+
+        <div class="card image-card">
+
+            <img
+                src="https://picsum.photos/800/400"
+                alt="Ilustrační fotografie na osobní webové stránce"
+                title="Ukradená Fotka ↓"
+            >
+
+        </div>
+
+    </div>
+</section>
+
+<!-- MALÝ MEME BOX -->
+<div class="meme-box">
+    <img id="meme-gif" src="" alt="Náhodný meme GIF">
+</div>
+
+<!-- ZÁJMY -->
+<section id="zajmy" class="section">
+    <div class="container">
+
         <h2>Co mě baví?</h2>
 
-        <h3>Hudba</h3>
-        <p>Rád poslouchám oblíbené písničky.</p>
+        <div class="hobbies">
 
-        <h3>Filmy</h3>
-        <p>Baví mě sledovat filmy a seriály.</p>
+            <div class="hobby">
+                <div class="icon">🎵</div>
+                <h3>Hudba</h3>
+                <p>Rád/a poslouchám oblíbené písničky.</p>
+            </div>
 
-        <h3>Sport</h3>
-        <p>Ve volném čase se věnuji sportu.</p>
+            <div class="hobby">
+                <div class="icon">🎬</div>
+                <h3>Filmy</h3>
+                <p>Baví mě sledovat filmy a seriály.</p>
+            </div>
 
-        <h2>Moje oblíbené věci</h2>
+            <div class="hobby">
+                <div class="icon">⚽</div>
+                <h3>Sport</h3>
+                <p>Ve volném čase se věnuji sportu.</p>
+            </div>
 
-        <ul>
+        </div>
+
+        <h2 class="favorites-title">Moje oblíbené věci</h2>
+
+        <ul class="favorite-list">
             <li>Hudba (víceméně vše, až na hardstyle)</li>
-            <li>Akční filmy a komedie</li>
-            <li>Týmové sporty</li>
+            <li>Filmy (akční filmy ty jsou moje, ale nepohrdnu ani nějakou komedií)</li>
+            <li>Sport (úplně miluju týmové sporty, až na FLORBAL - hokej pro holky)</li>
         </ul>
-    </section>
 
-    <section id="kontakt">
-        <h2>To je o mně zatím vše!</h2>
-        <p>Děkuji za návštěvu mé webovky.</p>
+    </div>
+</section>
 
-        <a href="https://www.youtube.com">
-            Navštívit YouTube
-        </a>
-    </section>
+<!-- KONTAKT -->
+<section id="kontakt" class="section">
+    <div class="container">
 
-    <footer>
-        <p>© 2026 Moje osobní stránka</p>
-    </footer>
+        <div class="contact-card">
 
-</body>
-</html>
+            <h2>To je o mně zatím vše!</h2>
+
+            <p>
+                Děkuji za návštěvu mé webovky.
+            </p>
+
+            <a
+                href="https://www.youtube.com"
+                title="Navštívit YouTube"
+                class="button"
+            >
+                stránka na které strávím více času než je zdrávo ↗
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- PATIČKA -->
+<footer>
+    <div class="container">
+        <p>© 2026 Moje osobní stránka | Vytvořeno pomocí HTML a CSS</p>
+    </div>
+</footer>
+
+<!-- AUTOMATICKÉ STŘÍDÁNÍ GIFŮ -->
+<script>
+
+    const memes = [
+        "https://media1.tenor.com/m/tT2-aVflWGgAAAAd/pepe-laugh.gif",
+        "https://media1.tenor.com/m/PrWRuW6qNdcAAAAd/tom-and-jerry-tom-laughing.gif",
+        "https://media1.tenor.com/m/QQNBxAeAvy4AAAAd/laughing-reaction.gif"
+    ];
+
+    let currentMeme = 0;
+
+    function changeMeme() {
+
+        document.getElementById("meme-gif").src = memes[currentMeme];
+
+        currentMeme++;
+
+        if (currentMeme >= memes.length) {
+            currentMeme = 0;
+        }
+
+    }
+
+    changeMeme();
+
+    setInterval(changeMeme, 5000);
+
+</script>
+```
+
+\</body> \</html>
+
